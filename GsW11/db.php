@@ -1,8 +1,8 @@
 <?php
-$host = 'mysql3109.db.sakura.ne.jp';  // 桜サーバーのMySQLホスト名
-$dbname = 'rivside_gsw11';          // 桜サーバー上のデータベース名
-$user = 'rivside_gsw11';                    // MySQLユーザー名
-$password = 'HrhC5573';                // MySQLのパスワード
+$host = '';  // 桜サーバーのMySQLホスト名
+$dbname = '';          // 桜サーバー上のデータベース名
+$user = '';                    // MySQLユーザー名
+$password = '';                // MySQLのパスワード
 
 try {
     $pdo = new PDO(
