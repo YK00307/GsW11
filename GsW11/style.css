@@ -1,0 +1,147 @@
+/* 全体背景：麻雀卓グリーン */
+body {
+    background-color: #0b3d0b;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+/* ゲーム画面のコンテナ */
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, #163f16, #0a260a);
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgb(0 0 0 / 0.7);
+    padding: 30px 20px;
+}
+
+/* タイトル */
+h2, h3 {
+    font-weight: bold;
+    letter-spacing: 0.08em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+/* ボタン共通スタイル */
+button, .btn {
+    display: inline-block;
+    background-color: #f1e7c9;
+    color: #1a1a1a;
+    font-weight: 600;
+    border-radius: 6px;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 8px 10px 8px;
+    cursor: pointer;
+    box-shadow: 0 3px 0 #b89d53;
+    transition: background-color 0.3s ease, box-shadow 0.2s ease;
+    letter-spacing: 0.05em;
+}
+
+/* ボタンホバー時 */
+button:hover, .btn:hover {
+    background-color: #fffde7;
+    box-shadow: 0 5px 8px #d1c795;
+}
+
+/* 問題の牌画像は横並びで間隔をあける */
+.tile-set {
+    margin: 20px 0;
+}
+
+.tile-set img {
+    margin: 0 5px;
+    width: 40px;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.6);
+    cursor: default;
+
+    /* アニメーション初期状態 */
+    transform-style: preserve-3d;
+    transform-origin: bottom center;
+    transition: transform 0.5s ease;
+}
+
+/* 牌をホバーしたら少しめくれる（3D回転） */
+.tile-set img:hover {
+    transform: rotateX(20deg);
+    box-shadow: 0 8px 12px rgba(0,0,0,0.8);
+}
+
+/* 正解メッセージ */
+.correct-msg {
+    color: #4CAF50;
+    font-size: 1.5rem;
+    margin-top: 15px;
+    font-weight: bold;
+    text-shadow: 0 0 10px #4CAF50aa;
+}
+
+/* 不正解メッセージ */
+.incorrect-msg {
+    color: #f44336;
+    font-size: 1.3rem;
+    margin-top: 13px;
+    font-weight: bold;
+    text-shadow: 0 0 10px #f4433633;
+}
+
+/* ページ下リンク */
+.footer-links a {
+    margin: 0 15px;
+    color: #d9d9b3;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* フォームのテキスト入力 */
+input[type=text], input[type=password] {
+    border-radius: 6px;
+    border: 1.5px solid #b1b174;
+    padding: 8px 10px;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    width: 200px;
+    text-align: center;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+    border-color: #f5f3be;
+}
+
+/* アニメーション付きカードめくり例（JavaScript使う場合） */
+@keyframes flop {
+  0% { transform: rotateY(0deg); }
+  50% { transform: rotateY(90deg); }
+  100% { transform: rotateY(0deg); }
+}
+
+.flop {
+  animation: flop 0.6s ease;
+}
+
+/* ラジオ・選択肢のボタン装飾も可 */
+.choice-btn {
+    padding: 10px 20px;
+    border: 1px solid #bbb76e;
+    border-radius: 6px;
+    background: #f7f7d7;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.choice-btn:hover {
+    background-color: #f0efd1;
+}
+
